@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "YouTube Video Title Announcer",
+  "description": "This extension announces the title of a YouTube video when it loads.  This is especially useful if you are listening to a playlist that is minimized or in another tab.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js":["speak.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
